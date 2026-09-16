@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: testpypi
-      url: https://test.pypi.org/project/python-sim/
+      url: https://test.pypi.org/project/agent-world-sim/
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

@@ -1,8 +1,10 @@
-# python-sim
+# agent-world-sim
 
-`python-sim` is a deterministic local world for testing tool-using AI agents. It gives an agent simulated email, orders, payments, refunds, and a clock, so every action stays local and later actions observe earlier state changes.
+`agent-world-sim` is a deterministic local world for testing tool-using AI agents. It gives an agent simulated email, orders, payments, refunds, and a clock, so every action stays local and later actions observe earlier state changes.
 
 Use it when a workflow has consequences across multiple steps: for example, an agent reads a refund request, finds an order, identifies a duplicate payment, refunds it, and sends confirmation. Use ordinary mocks for isolated unit tests where a fixed function response is all you need.
+
+`agent-world-sim` is the PyPI distribution name. The Python import name remains `python_sim`.
 
 ## 60-second example
 
@@ -32,7 +34,7 @@ assert sim.stripe.get_payment(refund.payment_id).status == "refunded"
 assert confirmation in sim.gmail.sent_mail()
 ```
 
-## Why python-sim instead of mocks?
+## Why agent-world-sim instead of mocks?
 
 A traditional mock usually models this:
 
@@ -40,7 +42,7 @@ A traditional mock usually models this:
 function/API call → predetermined response
 ```
 
-python-sim models this:
+agent-world-sim models this:
 
 ```text
 agent action → simulated world → state change → later action observes it
@@ -56,14 +58,23 @@ That makes it useful for:
 - snapshots, branching scenarios, and debugging
 - verifying the consequences of previous actions
 
-It does not replace ordinary mocks. Keep using mocks for isolated units and simple dependency substitution; use python-sim when the behavior under test is the evolving world.
+It does not replace ordinary mocks. Keep using mocks for isolated units and simple dependency substitution; use agent-world-sim when the behavior under test is the evolving world.
 
 ## Installation
 
-`python-sim` is not published to PyPI yet. Install a built wheel:
+Install the `agent-world-sim` distribution from a built wheel:
 
 ```bash
-python3 -m pip install /path/to/python_sim-0.1.0-py3-none-any.whl
+python3 -m pip install /path/to/agent_world_sim-0.1.0-py3-none-any.whl
+
+# Then import the unchanged Python package name.
+from python_sim import Simulation
+```
+
+After the first PyPI release, the normal installation command will be:
+
+```bash
+python3 -m pip install agent-world-sim
 ```
 
 After installation, examples run with the normal interpreter:
@@ -93,7 +104,7 @@ refund_tool = next(tool for tool in tools if tool.name == "stripe.refund_payment
 refund = refund_tool.call(payment_id="payment-id")
 ```
 
-Tool calls return typed models such as `Email`, `Order`, `Payment`, and `Refund`. They can raise the documented simulator errors below, as well as injected service failures. The agent/application decides whether to retry; python-sim only produces the configured failure.
+Tool calls return typed models such as `Email`, `Order`, `Payment`, and `Refund`. They can raise the documented simulator errors below, as well as injected service failures. The agent/application decides whether to retry; agent-world-sim only produces the configured failure.
 
 ### Available tools
 

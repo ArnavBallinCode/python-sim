@@ -1,3 +1,3 @@
-# python-sim
+# agent-world-sim
 
-python-sim is a local, deterministic simulation platform for AI agents and Python workflows. Use `Simulation` to create a stateful world with Gmail, GitHub, Slack, Calendar, and Stripe services. Use `clock`, `events`, `snapshot`, `restore`, `save`, and `load` to control and inspect test state.
+agent-world-sim is a local, deterministic simulation platform for AI agents and Python workflows. Install the `agent-world-sim` distribution and import `Simulation` from the unchanged `python_sim` package. Use it to create a stateful world with Gmail, GitHub, Slack, Calendar, and Stripe services. Use `clock`, `events`, `snapshot`, `restore`, `save`, and `load` to control and inspect test state.

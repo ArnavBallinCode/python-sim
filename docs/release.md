@@ -16,7 +16,7 @@ The project is released from version tags. The first release is `v0.1.0`; it is 
 Run the **Publish to TestPyPI** workflow manually from GitHub Actions. Install the uploaded candidate into a fresh environment using:
 
 ```bash
-python3 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ python-sim==VERSION
+python3 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ agent-world-sim==VERSION
 ```
 
 Run the example and smoke tests before production release.

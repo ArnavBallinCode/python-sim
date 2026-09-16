@@ -1,6 +1,6 @@
-# python-sim
+# agent-world-sim
 
-python-sim is a deterministic local world for testing tool-using AI agents. It is designed for workflows where one action changes what a later action can observe.
+agent-world-sim is a deterministic local world for testing tool-using AI agents. It is designed for workflows where one action changes what a later action can observe.
 
 The focused example is a customer-support agent that:
 
@@ -11,7 +11,7 @@ The focused example is a customer-support agent that:
 5. sends confirmation
 6. snapshots and replays the resulting world
 
-Use ordinary mocks for isolated units. Use python-sim when the thing under test is the evolving state and consequences of a multi-step tool workflow.
+Use ordinary mocks for isolated units. Use agent-world-sim when the thing under test is the evolving state and consequences of a multi-step tool workflow.
 
 ```python
 from python_sim import Simulation

@@ -5,7 +5,13 @@
 The first release is not yet published to PyPI. Install a built wheel:
 
 ```bash
-python3 -m pip install /path/to/python_sim-0.1.0-py3-none-any.whl
+python3 -m pip install /path/to/agent_world_sim-0.1.0-py3-none-any.whl
+```
+
+After publication, install the distribution directly with:
+
+```bash
+python3 -m pip install agent-world-sim
 ```
 
 The package has no mandatory runtime dependencies. The canonical example can then be run with:

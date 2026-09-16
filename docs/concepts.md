@@ -14,4 +14,4 @@ The current release intentionally focuses on Gmail, the application database/ord
 
 ## Mocks versus worlds
 
-Mocks return configured answers to isolated calls. python-sim models a world that changes after calls, allowing later agent actions to observe earlier consequences. It complements rather than replaces unit-test mocks.
+Mocks return configured answers to isolated calls. agent-world-sim models a world that changes after calls, allowing later agent actions to observe earlier consequences. It complements rather than replaces unit-test mocks.

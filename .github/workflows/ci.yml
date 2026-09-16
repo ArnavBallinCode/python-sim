@@ -38,5 +38,5 @@ jobs:
         if: matrix.python-version == '3.12'
         uses: actions/upload-artifact@v4
         with:
-          name: python-sim-distributions
+          name: agent-world-sim-distributions
           path: dist/

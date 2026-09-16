@@ -1,4 +1,4 @@
-site_name: python-sim
+site_name: agent-world-sim
 site_description: A deterministic local world for testing tool-using AI agents.
 repo_name: ArnavBallinCode/python-sim
 repo_url: https://github.com/ArnavBallinCode/python-sim
