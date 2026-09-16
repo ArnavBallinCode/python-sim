@@ -1,0 +1,28 @@
+site_name: python-sim
+site_description: A deterministic local world for testing tool-using AI agents.
+repo_name: ArnavBallinCode/python-sim
+repo_url: https://github.com/ArnavBallinCode/python-sim
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Concepts: concepts.md
+  - Tools: tools.md
+  - Snapshots: snapshots.md
+  - Failures: failures.md
+  - Events: events.md
+  - Custom services: custom-services.md
+  - API reference: api.md
+  - Testing: testing.md
+  - Release process: release.md

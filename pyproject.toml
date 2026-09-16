@@ -13,10 +13,12 @@ authors = [{ name = "python-sim contributors" }]
 dependencies = []
 keywords = ["simulation", "agents", "testing", "mock", "workflow"]
 classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only"]
+urls = { Homepage = "https://github.com/ArnavBallinCode/python-sim", Repository = "https://github.com/ArnavBallinCode/python-sim", Issues = "https://github.com/ArnavBallinCode/python-sim/issues", Changelog = "https://github.com/ArnavBallinCode/python-sim/blob/main/CHANGELOG.md" }
 
 [project.optional-dependencies]
 yaml = ["PyYAML>=6.0"]
-dev = ["pytest>=8.0", "ruff>=0.6"]
+docs = ["mkdocs>=1.6,<2", "mkdocs-material>=9.5"]
+dev = ["build>=1.2", "mypy>=1.11", "pytest>=8.0", "ruff>=0.6"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/python_sim"]
